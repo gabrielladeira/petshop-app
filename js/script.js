@@ -6,35 +6,20 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function definirSaudacao() {
-    var el = document.getElementById('greeting');
+    var el = document.getElementById('saudacao');
     if (!el) return;
 
     var hora = new Date().getHours();
-    var greeting;
+    var saudacao;
     if (hora >= 5 && hora < 12) {
-        greeting = 'Bom dia';
+        saudacao = 'Bom dia';
     } else if (hora >= 12 && hora < 18) {
-        greeting = 'Boa tarde';
+        saudacao = 'Boa tarde';
     } else {
-        greeting = 'Boa noite';
+        saudacao = 'Boa noite';
     }
 
-    el.textContent = greeting + '! Tudo para o seu pet, em um só lugar.';
-}
-
-function ativarTrocaDeImagem() {
-    var imagens = document.querySelectorAll('img[data-hover-src]');
-    imagens.forEach(function (img) {
-        var srcOriginal = img.getAttribute('src');
-        var srcHover = img.getAttribute('data-hover-src');
-
-        img.addEventListener('mouseenter', function () {
-            img.setAttribute('src', srcHover);
-        });
-        img.addEventListener('mouseleave', function () {
-            img.setAttribute('src', srcOriginal);
-        });
-    });
+    el.textContent = saudacao + '! Tudo para o seu pet, em um só lugar.';
 }
 
 function configurarDataMinima() {
