@@ -2,80 +2,104 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AuauMiau PetStop - Acessórios</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>AuauMiau PetStop - Acessórios</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="index.html">Início</a>
-                </li>
-                <li>Produtos
-                    <ul>
-                        <li>
-                            <a href="acessorios.html">Acessórios</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">AuauMiau PetStop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
                         </li>
-                        <li>
-                            <a href="racoes.html">Rações</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">
+                                Produtos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item active" href="acessorios.html">Acessórios</a></li>
+                                <li><a class="dropdown-item" href="racoes.html">Rações</a></li>
+                                <li><a class="dropdown-item" href="produtos-de-higiene.html">Higiene e Limpeza</a></li>
+                            </ul>
                         </li>
-                        <li>
-                            <a href="produtos-de-higiene.html">Higiene e Limpeza</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicos.html">Serviços</a>
                         </li>
                     </ul>
-                </li>
-                <li><a href="servicos.html">Serviços</a></li>
-            </ul>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
-        <h2>Acessórios</h2>
-        <p>Roupas, brinquedos, camas e outros itens para o seu pet.</p>
-        <article>
-            <h3>Brinquedo Spike - Bola de Borracha Sólida Vermelha para Cães</h3>
-            <img src="imgs/acessorio-bolinha-vermelha.png" alt="Brinquedo Spike - Bola de Borracha Sólida Vermelha para Cães" width="250">
-            <ul>
-                <li>Indicado para cães;</li>
-                <li>Para satisfazer o instinto de buscar;</li>
-                <li>Ideal para cães de todos os portes;</li>
-                <li>Feito de material seguro e atóxico;</li>
-                <li>Garante horas de diversão;</li>
-                <li>Perfeito para criar momentos com seu pet;</li>
-                <li>Disponível em embalagem com 1 unidade.</li>
-            </ul>
-            <p><strong>Valor:</strong> R$ 7,99</p>
-        </article>
-        <article>
-            <h3>Brinquedo Spike - Bola de Corda de Puxar Laranja para Cães</h3>
-            <img src="imgs/acessocio-corda-laranja.png" alt="Brinquedo Spike - Bola de Corda de Puxar Laranja para Cães" width="250">
-            <ul>
-                <li>Indicado para cães;</li>
-                <li>Para satisfazer o instinto de buscar;</li>
-                <li>Quica de maneira imprevisível;</li>
-                <li>Possui textura que auxilia na limpeza dos dentes e gengiva;</li>
-                <li>Ideal para cães de todos os portes;</li>
-                <li>Feito de material seguro e atóxico;</li>
-                <li>Garante horas de diversão;</li>
-                <li>Perfeito para criar momentos com seu pet;</li>
-                <li>Disponível em embalagem com 1 unidade.</li>
-            </ul>
-            <p><strong>Valor:</strong> R$ 21,99</p>
-        </article>
+        <div class="container my-4">
+            <h1>Acessórios</h1>
+            <p class="lead">Roupas, brinquedos, camas e outros itens para o seu pet.</p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <article class="card h-100">
+                        <img src="imgs/acessorio-bolinha-vermelha.png" class="card-img-top" alt="Brinquedo Spike - Bola de Borracha Sólida Vermelha para Cães">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h5">Brinquedo Spike - Bola de Borracha Sólida Vermelha para Cães</h2>
+                            <ul class="small">
+                                <li>Indicado para cães;</li>
+                                <li>Para satisfazer o instinto de buscar;</li>
+                                <li>Ideal para cães de todos os portes;</li>
+                                <li>Feito de material seguro e atóxico;</li>
+                                <li>Garante horas de diversão;</li>
+                                <li>Perfeito para criar momentos com seu pet;</li>
+                                <li>Disponível em embalagem com 1 unidade.</li>
+                            </ul>
+                            <p class="card-text mt-auto"><strong>Valor:</strong> R$ 7,99</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <article class="card h-100">
+                        <img src="imgs/acessocio-corda-laranja.png" class="card-img-top" alt="Brinquedo Spike - Bola de Corda de Puxar Laranja para Cães">
+                        <div class="card-body d-flex flex-column">
+                            <h2 class="card-title h5">Brinquedo Spike - Bola de Corda de Puxar Laranja para Cães</h2>
+                            <ul class="small">
+                                <li>Indicado para cães;</li>
+                                <li>Para satisfazer o instinto de buscar;</li>
+                                <li>Quica de maneira imprevisível;</li>
+                                <li>Possui textura que auxilia na limpeza dos dentes e gengiva;</li>
+                                <li>Ideal para cães de todos os portes;</li>
+                                <li>Feito de material seguro e atóxico;</li>
+                                <li>Garante horas de diversão;</li>
+                                <li>Perfeito para criar momentos com seu pet;</li>
+                                <li>Disponível em embalagem com 1 unidade.</li>
+                            </ul>
+                            <p class="card-text mt-auto"><strong>Valor:</strong> R$ 21,99</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer>
-        <p>
-            AuauMiau PetStop S/A - CNPJ 00.000.000/0000-00 - Endereço: Rua Fantasia, 123 - Bairro Legal - Porto Alegre - RS - CEP: 90000-100
-        </p>
-        <p>
-            Copyright© 2026 AuauMiau PetStop S/A
-        </p>
-        <p>
-            Contato: contato@auaumiaupetstop.com | (51) 0000-0000
-        </p>
-        <p>
-            Desenvolvido por Gabriel Ladeira
-        </p>
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <p>
+                AuauMiau PetStop S/A - CNPJ 00.000.000/0000-00 - Endereço: Rua Fantasia, 123 - Bairro Legal - Porto Alegre - RS - CEP: 90000-100
+            </p>
+            <p>
+                Copyright© 2026 AuauMiau PetStop S/A
+            </p>
+            <p>
+                Contato: contato@auaumiaupetstop.com | (51) 0000-0000
+            </p>
+            <p class="mb-0">
+                Desenvolvido por Gabriel Ladeira
+            </p>
+        </div>
     </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
