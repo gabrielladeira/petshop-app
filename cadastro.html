@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AuauMiau PetStop - Cadastro</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">AuauMiau PetStop</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                Produtos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="acessorios.html">Acessórios</a></li>
+                                <li><a class="dropdown-item" href="racoes.html">Rações</a></li>
+                                <li><a class="dropdown-item" href="produtos-de-higiene.html">Higiene e Limpeza</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicos.html">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="cadastro.html">Cadastro</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container my-4">
+            <h1>Cadastro de Cliente e Pet</h1>
+            <p class="lead">Preencha seus dados e os do seu pet para começar a aproveitar a AuauMiau PetStop.</p>
+
+            <form action="https://formsubmit.co/contato@auaumiaupetstop.com" method="POST">
+                <input type="hidden" name="_subject" value="Novo cadastro - AuauMiau PetStop">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="index.html">
+                <input type="hidden" name="_captcha" value="false">
+
+                <fieldset class="mb-4">
+                    <legend class="h4 border-bottom pb-2 mb-3">Dados Pessoais</legend>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome completo" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Somente números" pattern="[0-9]{11}" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(51) 90000-0000" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="nascimento" class="form-label">Data de Nascimento</label>
+                            <input type="text" class="form-control" id="nascimento" name="nascimento" placeholder="DDMMAAAA" pattern="[0-9]{8}" required>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="form-label d-block">Sexo</span>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sexo" id="sexoMasculino" value="masculino" required>
+                                <label class="form-check-label" for="sexoMasculino">Masculino</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sexo" id="sexoFeminino" value="feminino">
+                                <label class="form-check-label" for="sexoFeminino">Feminino</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="mb-4">
+                    <legend class="h4 border-bottom pb-2 mb-3">Endereço</legend>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="rua" class="form-label">Rua</label>
+                            <input type="text" class="form-control" id="rua" name="rua" placeholder="Nome da rua" required>
+                        </div>
+                        <div class="col-md-2">
+                            <label for="numero" class="form-label">Número</label>
+                            <input type="text" class="form-control" id="numero" name="numero" placeholder="Número" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="complemento" class="form-label">Complemento</label>
+                            <input type="text" class="form-control" id="complemento" name="complemento" placeholder="Apto, Bloco, Prédio">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="estado" class="form-label">Estado</label>
+                            <select class="form-select" id="estado" name="Estado">
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RR">Roraima</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS" selected>Rio Grande do Sul</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="cidade" class="form-label">Cidade</label>
+                            <input type="text" class="form-control" id="cidade" name="Cidade" placeholder="Informe a cidade" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="mb-4">
+                    <legend class="h4 border-bottom pb-2 mb-3">Dados do Pet</legend>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <label for="nomePet" class="form-label">Nome do pet</label>
+                            <input type="text" class="form-control" id="nomePet" name="NomePet" placeholder="Nome do pet" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="raca" class="form-label">Raça</label>
+                            <input type="text" class="form-control" id="raca" name="raca" placeholder="Informe a raça" required>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="nascimentoPet" class="form-label">Data de nascimento</label>
+                            <input type="text" class="form-control" id="nascimentoPet" name="NascimentoPet" placeholder="DDMMAAAA" pattern="[0-9]{8}" required>
+                        </div>
+                        <div class="col-md-4">
+                            <span class="form-label d-block">Sexo</span>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sexoPet" id="sexoPetMacho" value="Macho" required>
+                                <label class="form-check-label" for="sexoPetMacho">Macho</label>
+                            </div>
+                             <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="sexoPet" id="sexoPetFemea" value="feminino">
+                                <label class="form-check-label" for="sexoPetFemea">Fêmea</label>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" id="termos" name="AceiteTermos" value="sim" required>
+                    <label class="form-check-label" for="termos">
+                        Li e aceito os termos de uso e a política de privacidade da AuauMiau PetStop.
+                    </label>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary px-5">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container text-center">
+            <p>
+                AuauMiau PetStop S/A - CNPJ 00.000.000/0000-00 - Endereço: Rua Fantasia, 123 - Bairro Legal - Porto Alegre - RS - CEP: 90000-100
+            </p>
+            <p>
+                Copyright© 2026 AuauMiau PetStop S/A
+            </p>
+            <p>
+                Contato: contato@auaumiaupetstop.com | (51) 0000-0000
+            </p>
+            <p class="mb-0">
+                Desenvolvido por Gabriel Ladeira
+            </p>
+        </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
