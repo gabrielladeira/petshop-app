@@ -42,7 +42,7 @@
         </nav>
     </header>
     <main>
-        <div class="container my-4">
+        <section class="container my-4">
             <h1>Banho e Tosa</h1>
             <h2 class="h4">A higiene do pet é indicada por veterinários</h2>
             <p>
@@ -76,13 +76,74 @@
                         <div class="card-body">
                             <h3 class="card-title h5">Busca a domicílio</h3>
                             <p class="card-text">Tá sem tempo de vir? Não tem problema, a gente pega seu amiguinho(a) em casa :)</p>
-                            <p class="card-text">Importante, o serviço de busca está disponível apenas para a região de Porto Alegre.</p>
+                            <p class="card-text">O serviço de busca está disponível apenas para a região de Porto Alegre.</p>
                             <p class="card-text"><strong>Valor:</strong> R$ 40,00</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+        </section>
+        <section class="container my-4">
+            <h2 class="h3 mt-5 mb-3">Agende seu horário</h2>
+            <p>Escolha o serviço, a forma de atendimento e a data que preferir. Confirmamos por telefone ou email.</p>
+
+            <form id="formAgendamento" action="https://formsubmit.co/contato@auaumiaupetstop.com" method="POST">
+                <input type="hidden" name="_subject" value="Novo agendamento - AuauMiau PetStop">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="index.html">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="nomeCliente" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nomeCliente" name="nome" placeholder="Nome completo" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="telefoneCliente" class="form-label">Telefone</label>
+                        <input type="tel" class="form-control" id="telefoneCliente" name="telefone" placeholder="(51) 90000-0000" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="nomePetAgendamento" class="form-label">Nome do pet</label>
+                        <input type="text" class="form-control" id="nomePetAgendamento" name="nomePet" placeholder="Nome do pet" required>
+                    </div>
+
+                    <div class="col-md-3">
+                        <span class="form-label d-block">Serviços</span>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="servicoBanho" id="servicoBanho" value="Banho">
+                            <label class="form-check-label" for="servicoBanho">Banho</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="servicoTosa" id="servicoTosa" value="Tosa">
+                            <label class="form-check-label" for="servicoTosa">Tosa</label>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <span class="form-label d-block">Atendimento</span>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="metodoBusca" id="metodoBusca" value="busca no domicílio" required>
+                            <label class="form-check-label" for="metodoBusca">Busca no domicílio</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="metodoBusca" id="metodoEntrega" value="entrega no local">
+                            <label class="form-check-label" for="metodoEntrega">Entrega no local</label>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <label for="dataAgendamento" class="form-label">Data</label>
+                        <input type="date" class="form-control" id="dataAgendamento" name="data" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="horaAgendamento" class="form-label">Horário</label>
+                        <input type="time" class="form-control" id="horaAgendamento" name="hora" required>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary px-5">Agendar</button>
+                </div>
+            </form>
+        </section>
     </main>
     <footer class="bg-dark text-light py-4 mt-5">
         <div class="container text-center">
@@ -101,5 +162,6 @@
         </div>
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
